@@ -36,7 +36,8 @@ function App() {
 
   return (
     <div className="App">
-      <CourseGoalsList goals={goals} /> {/* props = state*/}
+      <CourseGoalsList goals={goals} onDeleteGoal={handleDeleteGoal} />
+      {/* props = state*/}
       <button onClick={handleAddGoal}>Add Goal</button>
       {/* <Header image={{ src: beetle, alt: "just beetle" }}>
         <h1>My course goals</h1>

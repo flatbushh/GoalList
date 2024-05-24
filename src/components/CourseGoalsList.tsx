@@ -3,9 +3,13 @@ import { CourseGoalType } from "../App";
 
 type CourseGoalListProps = {
   goals: CourseGoalType[];
+  onDeleteGoal: (id: number) => void;
 };
 
-export const CourseGoalsList = ({ goals }: CourseGoalListProps) => {
+export const CourseGoalsList = ({
+  goals,
+  onDeleteGoal,
+}: CourseGoalListProps) => {
   return (
     <ul>
       {goals.map((goal) => {
@@ -16,6 +20,7 @@ export const CourseGoalsList = ({ goals }: CourseGoalListProps) => {
                 id={goal.id}
                 title={goal.title}
                 description={goal.description}
+                onDelete={onDeleteGoal}
               />
             </li>
           </div>

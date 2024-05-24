@@ -5,10 +5,12 @@ export const CourseGoal = ({
   id,
   title,
   description,
+  onDelete,
 }: {
   id: number;
   title: string;
   description: string;
+  onDelete: (id: number) => void;
 }) => {
   //po propsie jest {}, bo typujemy propsa jako obiekt z danymi wartosciami (tak samo jak w myType np)
 
@@ -16,7 +18,7 @@ export const CourseGoal = ({
     <div>
       <h2>{title}</h2>
       <p>{description}</p>
-      <button>Delete Goal</button>
+      <button onClick={() => onDelete(id)}>Delete Goal</button>
     </div>
   );
 };
