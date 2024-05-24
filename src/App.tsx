@@ -6,6 +6,7 @@ import beetle from "./img/beetle.jpeg";
 import { Header } from "./components/Header";
 import { CourseGoalTwo, CourseGoalThree } from "./components/Header";
 import { CourseGoalsList } from "./components/CourseGoalsList";
+import { NewGoal } from "./components/newGoal";
 
 export type CourseGoalType = {
   id: number;
@@ -36,9 +37,9 @@ function App() {
 
   return (
     <div className="App">
+      <NewGoal />
       <CourseGoalsList goals={goals} onDeleteGoal={handleDeleteGoal} />
       {/* props = state*/}
-      <button onClick={handleAddGoal}>Add Goal</button>
       {/* <Header image={{ src: beetle, alt: "just beetle" }}>
         <h1>My course goals</h1>
       </Header>
